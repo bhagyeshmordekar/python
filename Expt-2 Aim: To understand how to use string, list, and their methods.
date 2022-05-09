@@ -1,0 +1,63 @@
+""" 
+Program2A. Write a program to show use of different string methods in python. ( Use of string 
+methods: .capitalize(), .title(), .upper(), .lower() ) 
+""" 
+text = "India is mother of algebra, zero, chess, pi value, diamond mining etc." 
+print( text ) 
+print("Capitalize:" , text.capitalize()) 
+print("TitleCase:" , text.title()) 
+print("UpperCase:" , text.upper()) 
+print("LowerCase:" , text.lower()) 
+
+
+""" 
+Program2B. Write a program to convert a string into a list of letters/characters/words in the 
+word. ( Use of string methods: list(), .split() ) 
+""" 
+str1 = "Rupesh" 
+str2 = "Hello All" 
+str3 = "Python features makes it the best language for AIML." 
+lst1 = list(str1) #make a list of characters of given word
+lst2 = list(str2) 
+lst3 = str3.split() #make a list of words of given string/text
+print("List of letters/characters of" , str1 , "is" , lst1) 
+print("List of letters/characters of" , str2 , "is" , lst2) 
+print("Text:" , str3) 
+print("List of words of Text using split() is" , lst3) 
+
+
+""" 
+Program2C. Write a program to create username of 6 letters from the name given by user. Where 
+First character is "#", second character is first letter of first name in upper-case and remaining 4 
+letters are first 4 letters of last name in lower-case. ( Use of string slicing & concatenation) 
+""" 
+first = input("Enter first name: ") 
+last = input("Enter last name: ") 
+#concatenate 1st letter of first name & 4 letters from last name. 
+x = first[0] + last[:4] # String Slicing & Concatenating using + operator
+y = x.capitalize() 
+uname = "#" + y #Concatenate: Adding '#' before Capitalized username
+print("Your Username is:" , uname) 
+
+
+""" 
+Program2D. Given a list 'lst' of random numbers, write a program to create LIST, append and 
+remove elements in a list such that the list gives prime numbers between 0 to 15. ( Use of list 
+methods: .sort(), .sort(reverse=True, .append(), .insert(), .remove() ) 
+""" 
+lst = [7, 10, 5, 2] 
+print("Given List: " ,lst) 
+lst.sort() 
+print("After sorting: " ,lst) 
+lst.append(13) 
+print("After appending 13: " ,lst) 
+lst.insert(1,3) 
+print("After inserting 3 at index=1: " , lst) 
+lst.remove(10) 
+print("After removing element 10: " , lst) 
+lst.insert(4,11) 
+print("After inserting 11 at index=4: " , lst) 
+lst.sort(reverse=True) 
+print("After sorting in Descending order: " , lst) 
+
+

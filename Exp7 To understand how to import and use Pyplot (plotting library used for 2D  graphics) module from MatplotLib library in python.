@@ -1,0 +1,109 @@
+""" 
+Program7A. Write a program to plot a graph using matplotlib. ( Use of plot() and show() functions 
+of pyplot module in matplotlib library) 
+""" 
+# Importing matplotlib module 
+from matplotlib import pyplot as plt 
+# OR use: import matplotlib.pyplot as plt
+# X-axis values 
+x = [1, 2, 3, 4, 5] 
+ 
+# Y-axis values 
+y = [10, 5, 8, 6, 7] 
+ 
+# Function to plot 
+plt.plot(x,y) 
+ 
+# Function to show the plot 
+plt.show()
+
+
+
+
+
+""" 
+Program7B. Write a program to set origin as (0,0), display axis labels and title to graph of 
+program7A. ( Use of xlabel(), ylabel(), axis() functions of pyplot module in matplotlib library) 
+""" 
+# Importing matplotlib module 
+from matplotlib import pyplot as plt 
+# OR use: import matplotlib.pyplot as plt
+# X-axis values 
+x = [1, 2, 3, 4, 5] 
+# Y-axis values 
+y = [10, 5, 8, 6, 7] 
+# Set the label for the x-axis 
+plt.xlabel("X-axis") 
+# Set the label for the y-axis 
+plt.ylabel("Y-axis") 
+# Set the Title of the graph 
+plt.title("Sample Graph-2 for Lab") 
+# Set the axis properties 
+plt.axis([0,6,0,12]) 
+# Show grid lines 
+plt.grid() 
+# Function to plot 
+plt.plot(x,y) 
+# Function to show the plot 
+plt.show()
+
+# (Just to show different styles: Not to be written in manual) Program to show different colors 
+and shapes that can be used to show graph. 
+from matplotlib import pyplot as plt 
+x = [1, 2, 3, 4, 5] 
+y = [10, 5, 8, 6, 7] 
+plt.xlabel("X-axis") 
+plt.ylabel("Y-axis") 
+plt.title("Sample Graph-2 for Lab") 
+plt.axis([0,6,0,12]) 
+plt.grid() 
+“”” To show graph with different colors: 
+k=black, y=yellow, r=red, g=green, b=blue””” 
+plt.plot(x,y, color = 'y') # y = yellow line
+plt.plot(x,y, color = 'g' ) # g = green line
+“”” To show graph with different shapes: 
+--=dashedLine, o=circle, ^=triengle, *=star, 
+d=diamond””” 
+plt.plot(x,y, 'r--') # r-- = red color dashed Line
+plt.plot(x,y, ' b^ ' ) # b^ = blue triangle 
+plt.plot(x,y,'kd') # kd = black diamond
+plt.show() 
+
+
+
+
+
+
+""" 
+Program7C. Write a program show 2 graphs along with legends. 
+""" 
+# Importing matplotlib module 
+from matplotlib import pyplot as plt 
+# OR use: import matplotlib.pyplot as plt
+# X-axis values 
+x = [1, 2, 3, 4, 5] 
+x2= [0.5, 2, 3,5.5] 
+# Y-axis values 
+y = [10, 5, 8, 6, 7] 
+y2= [2, 9, 4,3] 
+# Set the label for the x-axis 
+plt.xlabel("X-axis") 
+# Set the label for the y-axis 
+plt.ylabel("Y-axis") 
+# Set the Title of the graph 
+plt.title("Sample Graph for Lab") 
+# Set the axis properties 
+plt.axis( [ 0, 6, 0, 12 ] ) 
+# Show grid lines 
+plt.grid() 
+# Function to plot, set label for legend and set linewidth of anyone line to 3 
+plt.plot( x, y, label = "graph-1") 
+plt.plot( x2, y2, label = "graph-2", linewidth=3) # if linewidth is not set default value=1.5
+plt.legend() 
+# Function to show the plot 
+plt.show()
+
+
+
+
+

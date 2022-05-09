@@ -1,0 +1,66 @@
+""" 
+Program1. Write a python program to show different ways to use print() statement. (Use of 
+print() using 3 different methods) 
+""" 
+print("This program shows different ways of using print() statement.") 
+x , y = 15 , 25 # OR use: x = 15 ; y = 25 
+print( x , y ) 
+#Method-1 
+print("The first number is =" , x , "& second number is =" , y , ".") 
+#Method-2: use of .format() method 
+print("The first number is = {} & second number is = {}." .format( x , y )) 
+#Method-3: use of f-string method 
+print(f"The first number is = {x} & second number is = {y}.") 
+
+
+""" 
+Program1A. Write a program to demonstrate basic data types in python and use of print 
+function. ( Use of print() using 2 methods and use of type() ) 
+""" 
+print("This program shows how print function works and how to find data type of variable.") 
+a = 5 
+print("Type of a is: " , type(a)) #method-1 to use print()
+#print("Type of a is: {}” .format( type( a )) #method-2 to print using .format()
+print("Type of a=" , a , "is---" , type(a)) #method-1 to use print()
+#print("Type of a= {} is {}” .format( a , type( a )) #method-2 to print using .format()
+b = 5.0 
+print("Type of b is: " , type(b)) 
+print("Type of b=" , b , "is---", type(b)) 
+c = 3+6j 
+print("Type of c is: " , type(c)) 
+print("Type of c=" , c , "is---" , type(c)) 
+d = "Ratnagiri" 
+print("Type of d is: " , type(d)) 
+print("Type of d=" , d , "is---" , type(d)) 
+e = [2, 5, "FAMT", 1.23] 
+print("Type of e is: " , type(e)) 
+print("Type of e=" , e , "is---" , type(e)) 
+
+
+""" 
+Program1B. Write a python program to accept 2 numbers from user and perform addition and 
+subtraction. ( Use of input() and print() ) 
+""" 
+print("This program shows how input function works.") 
+a = int(input("Enter the value of a: ")) 
+b = int(input("Enter the value of b: ")) 
+c = a + b 
+print("The sum of a & b is = " , c) #OR use: print(“The sum of a & b is = {}” .format( c ))
+d = a-b 
+print("The subtraction of a & b is = " , d) 
+
+
+""" 
+Program1C. Write a python program to perform different Arithmetic operations on two numbers. 
+""" 
+print("This program shows use of different Arithmetic Operator") 
+x = 10; y = 3 
+print("Addition of x=",x,"& y=" , y , "is" , x + y ) #using method-1 OR
+#print("Addition of x = {} & y = {} is {}".format( x , y , x + y)) #method-2: print using .format()
+print("Subtraction of x = {} & y = {} is {}".format( x , y , x - y)) #method-2: print using .format()
+print("Multiplication of x=" , x , "& y=" , y , "is" , x*y ) #using method-1
+print("Division of x= {} & y= {} is {}".format( x , y , x / y )) #method-2: print using .format()
+print("Floor Division of x=" , x , "& y=" , y , "is" , x // y ) #method-1
+print("Modulus(gives remainder of division) of x= {} & y= {} is {}".format( x , y , x % y )) #method-2
+print("Exponent(gives x raised to y) of x=" , x , "& y=" , y , "is" , x**y ) #method-1
+print("Average of x= {} & y= {} is {}".format( x , y , (x + y)/2 )) #method-2

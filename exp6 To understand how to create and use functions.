@@ -1,0 +1,119 @@
+""" 
+Program6A. Write a function sqr() to calculate the square and cube() to calculate the cube of a 
+number. Where sqr() will print the value directly and cube() will return the value. ( Use of def to 
+define a function, and use of function with 0(no) & 1(single) parameters) 
+""" 
+def hello(): # a function without any parameter & no return value
+ print("*Welcome to learn python functions*") 
+ 
+def sqr(r): #a function with 1 parameter, Syntax: def function_name(parameters): 
+ s = r * r 
+ print("Square of ",r,"=", s) 
+ 
+def cube(r): #a function with 1 parameter & 1 return value
+ c = r*r*r 
+ return(c) # returning the value of c to the location from where cube() was called
+hello() # calling hello() function without passing any argument
+sqr(2) #Syntax: function_name(argument):
+sqr(7) # passing 2 as argument to sqr() function
+sqr(13) 
+print("--------------") 
+x = cube(2) # passing value 2 as argument to cube() function
+y = cube(7) 
+z = cube(13) 
+print("Cube of 2 =", x) 
+print("Cube of 7 =", y) 
+print("Cube of 13 =", z) 
+
+
+""" 
+Program6B. Write two function to calculate the sum and product of 2 numbers. 
+Both the functions accept 2 parameters. ( Use of function with 2 parameters, also use of map() & 
+split()) 
+""" 
+def hello(): # function without any input parameter & no return value
+ print("*Welcome to learn python functions with 2 parameters.*") 
+def add( p1 , p2 ): # function with 2 input parameters & no return value
+ sum = p1 + p2 
+ print("Sum of given numbers",p1,"&",p2," is = " , sum) 
+ 
+def mult( p1 , p2 ): # function 2 input parameter & no return value
+ prod = c * d 
+ print("Product of given numbers is = " , prod) 
+hello() # Calling hello() function
+x , y = 4,6 # shows how to assign values to more than one variable in single statement
+add( x , y ) # Calling add() function
+# Taking 2 inputs from user using split() and converting into integer using int() separately
+a , b = input("enter any 2 number separated by space to add : ").split() 
+a = int( a ) 
+b = int ( b) 
+add( a , b ) # Calling add() function
+# Taking input from user and converting into integer in single line using map()
+c , d = map( int , input("enter any 2 number separated by comma to multiply : ").split(",")) 
+mult( c , d ) # Calling mult() function
+
+
+
+""" 
+Program6C. Write a python program to show how to return multiple values. 
+(Remember total values returned should have same number of variables to accept those 
+returned values.) (Use of function with more than 2 parameters and returning multiple values, 
+also use of map() & split())
+""" 
+print("*Let us write a program to find square of given numbers also sum of all square values.*") 
+def sqrSum( p1 , p2 , p3 ): # function with 3 input parameters & 5 return values
+ sqrp1 = p1 * p1 
+ sqrp2 = p2 * p2 
+ sqrp3 = p3 * p3 
+ sum = sqrp1 + sqrp2 + sqrp3 
+ msg = "Hi from sqrSum() function !" 
+ return ( msg , sqrp1, sqrp2, sqrp3 , sum ) 
+# If 3 values is to be given directly, we can do it by following single statement 
+num1, num2, num3 = 2, 5, 10 
+# If 3 values is to be taken from user, use following single statement instead of above 
+#num1 , num2 , num3 = map( int, input("enter 3 number SEPARATED BY SPACE : ").split()) 
+a, b, c, d , x = sqrSum( num1 , num2 , num3 ) 
+# In above statement a, b, c, d & x will get returned values msg, sqrp1, sqrp2, sqrp3 & sum resp.
+print( a ) 
+print("Square of", num1 , "is" , b ) 
+print("Square of", num2 , "is" , c ) 
+print("Square of", num3 , "is" , d ) 
+print("Sum of squares of", num1 , "," , num2 , "and" , num3 , "is = " , x) 
+
+
+
+
+""" 
+Program6D. Write following two python functions where number of arguments are not fixed. 
+(1) First function calculates total sum of the numbers entered by user (this function should not 
+return a value). 
+(2) Second function calculates total product of the numbers entered by user (this function return 
+product value). 
+Use of functions when number of arguments may vary. 
+""" 
+# Function definition of totalSum function 
+def totalSum(*arguments): 
+ sum = 0 
+ for num in arguments: 
+ sum = sum + num #i.e., sum += num 
+ print(sum) 
+ 
+# Function call 
+totalSum(5, 4, 3, 2, 1) 
+ #-------------------------------------------------------------------------------------------------------------------------------- 
+# totalProd Function definition 
+def totalProd(*arguments): 
+ message = "Hi from totalProd() Function and product value is : " 
+ prod = 1 # we can’t put prod=0, otherwise all products will be 0
+ for num in arguments: 
+ prod = prod * num #i.e., prod *= num 
+ return(message , prod ) 
+ 
+# Function call 
+msg ,product = totalProd(2,5,11) 
+print( msg , product )
+
+
+
+
+

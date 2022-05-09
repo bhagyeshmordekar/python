@@ -1,0 +1,54 @@
+""" 
+Program3A. Given a tuple ‘marks’ with marks of 10 students. Ask user to enter a mark and then 
+display how many times the entered marks repeated also display the index number at which it 
+first appeared in tuple. ( Use of map() and tuple methods: .count() & .index() ) 
+""" 
+# marks = (12,17,13,14,15,15,13,30,12,15) # creating a tuple of marks of students
+# Alternate Way: Taking input from user and creating a tuple 
+marks = tuple(map(int , input("Enter marks separated by comma").split(","))) 
+# Tip: List can also be creating using above statement by simply writing list inplace of tuple. 
+val = int(input('Enter any marks: ')) 
+n = marks.count(val) 
+indx = marks.index(val) 
+print("The marks" , val , "comes" , n , "times in Tuple and first appear at index number" , indx) 
+
+
+
+""" 
+Program3B. For a given dictionary, write a program to display only keys first, then only values 
+and then display all key-value pairs. (Use of dictionary methods: .get(), .keys(), .values(), .items() ) 
+""" 
+dict = {10:'Finolex', 20:'Academy', 30:'Ratnagiri'} 
+print('original: ', dict) 
+# Accessing value for key using following 2 methods 
+print(dict.get(10)) # get value of key=10
+print(dict[30]) # get value of key=30
+# Accessing keys for the dictionary 
+print(dict.keys()) 
+# Accessing keys for the dictionary 
+print(dict.values()) 
+# Printing all the items of the Dictionary 
+print(dict.items()) 
+
+
+
+""" 
+Program3C. Two dictionaries are given, write a program to show working of update() method 
+(i.e., add contents of 2nd dict into 1st dict) and display contents of all dictionaries. ( Use of 
+dictionary methods: .update() ) 
+""" 
+dict1 = {'A': 'Finolex', 'B': 'Industry'} 
+dict2 = {'B': 'Academy', 'C': 'Ratnagiri'} 
+# Dictionary before Updation 
+print("Original Dictionary:") 
+print("Dictionary1: " , dict1) 
+print("Dictionary2: " , dict2) 
+ 
+# Update the value of key 'B' 
+dict1.update(dict2) 
+print("Dictionary after Updation:") 
+print("Dictionary1: " , dict1) 
+print("Dictionary2: " , dict2) 
+
+
+

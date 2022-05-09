@@ -37,3 +37,38 @@ if len(found) != 0:
  print("Vowel count is" , found) 
 else: 
  print(word , "doesn't contain any vowel")
+ 
+ 
+ """ 
+Program5C. Using while loop write a program to add natural numbers upto n. Take value of n 
+from user. i.e., sum = 1+2+3+...+n. ( Use of “ while ” loop) 
+""" 
+# To take input from the user 
+n = int(input("Enter n: ")) 
+# Initialize sum and counter 
+sum = 0 
+i = 1 
+while i <= n: 
+ sum = sum + i 
+ i = i+1 # update/increment counter
+# Print the sum 
+print("The sum is" , sum) 
+
+
+
+""" 
+Program5D. Write a program for a clinic where patients are given a token number and they are 
+called by their token number when doctor/physician press Y on his computer and stops when he 
+presses N on the computer. ( Use of “ while ” loop) 
+""" 
+print("Hello everyone, Welcome to the clinic.") 
+token = 1 
+c = "Y" 
+while(c == "Y"): 
+ print("Token number" ,token, "may please come in") 
+ c=input("Continue? (Y/N): ") # Asks whether to continue, Y will continue
+ token=token+1 # Updating/Incrementing token number by 1
+print("We are stopping here, Thank You!") 
+
+
+

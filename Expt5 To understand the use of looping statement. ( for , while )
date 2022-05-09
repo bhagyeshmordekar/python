@@ -1,0 +1,39 @@
+""" 
+Program5A. Write a program to display vowels in the word taken as input from user and store 
+them in a LIST. ( Use of “ for ” loop) 
+""" 
+vowels = ['a','e','i','o','u'] 
+word = input("Enter any word: ") 
+word = word.lower() 
+found = [] 
+for ch in word: 
+ if ch in vowels: 
+ if ch not in found: 
+ found.append(ch) 
+if len(found) == 0: 
+ print(word , "Doesn't contain any vowel") 
+for ele in found: 
+ print(ele) # to display elements of list
+print(found) # displaying list directly
+
+
+
+
+""" 
+Program5B. Write a program to count the number of times a vowel comes in a word taken from 
+user and store them in DICTIONARY. ( Use of “ for ” loop) 
+""" 
+vowels = ['a','e','i','o','u'] 
+word = input("Provide a word to search for vowels: ") 
+lcword = word.lower() # lcword storing lowercase copy of word
+found = {} 
+for ch in lcword: 
+ if ch in vowels: 
+ if ch in found: 
+ found[ch] += 1 
+ else: 
+ found[ch] = 1 
+if len(found) != 0: 
+ print("Vowel count is" , found) 
+else: 
+ print(word , "doesn't contain any vowel")
